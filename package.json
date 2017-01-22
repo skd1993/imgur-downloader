@@ -1,0 +1,11 @@
+{
+    "name": "imgur-downloader",
+    "version": "1.0.0",
+    "description": "An experimental electron app to download pictures from an  Imgur album.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron main.js"
+    },
+    "author": "Shobhit Kumar Deepanker",
+    "license": "ISC"
+}
