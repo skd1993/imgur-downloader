@@ -41,7 +41,7 @@ function search() {
     var options = {
         url: request_url,
         headers: {
-            'Authorization': 'Client-ID dea8f24a34ce5c6'
+            'Authorization': 'Client-ID xxxxxxxxx'
         }
     };
 
