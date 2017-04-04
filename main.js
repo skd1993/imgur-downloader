@@ -39,9 +39,9 @@ function search() {
     console.log(request_url);
 
     var options = {
-        url: s,
+        url: request_url,
         headers: {
-            'Authorization': 'Client-ID xxxxxxxxxxx'
+            'Authorization': 'Client-ID dea8f24a34ce5c6'
         }
     };
 
@@ -54,11 +54,14 @@ function search() {
             console.log(info.data.images);
             for(var i=0; i<info.data.images.length; i++){
                 var html = '<li>' + info.data.images[i].link + '</li>';
+                urls.push(info.data.images[i].link);
                 document.getElementById('listofimages').innerHTML += html;
+                var extension = urls[i].substr(urls[i].lastIndexOf('.'));
+                request(urls[i]).pipe(fs.createWriteStream('app/img/' + i + extension));
             }
         }
         else {
-            cosole.log('some error occured');
+            console.log('some error occured');
         }
     }
 
