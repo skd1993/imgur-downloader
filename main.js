@@ -31,7 +31,6 @@ function search() {
         if (!err && resp.statusCode == 200) {
             var $ = cheerio.load(body);
             $('.post-image-placeholder').each(function() {
-
                 console.log(this);
                 var url = this.attribs.src;
                 urls.push('http:\/\/' + url.substr(2));
